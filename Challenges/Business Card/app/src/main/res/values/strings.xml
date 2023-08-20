@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Business Card</string>
+    <string name="name">Peter Njuguna</string>
+    <string name="profession">Android Developer Expert</string>
+    <string name="phone_number">+254 751 094 790</string>
+    <string name="share_handle">\@PcodesDev</string>
+    <string name="email_address">pcodesdev@gmail.com</string>
+</resources>
