@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -13,6 +14,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Email
 import androidx.compose.material.icons.filled.Phone
@@ -24,6 +26,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.painterResource
@@ -101,7 +104,7 @@ fun Person(name: String, profession:String, modifier: Modifier=Modifier){
 
 @Composable
 fun PersonImage(name: String, profession:String, modifier: Modifier=Modifier){
- val image= painterResource(R.drawable.android_logo)
+ val image= painterResource(R.drawable.petero)
 
     Column (verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally) {
@@ -114,7 +117,13 @@ fun PersonImage(name: String, profession:String, modifier: Modifier=Modifier){
         modifier= Modifier
             .width(200.dp)
             .height(200.dp)
+            .shadow(elevation = 16.dp,
+                shape = RoundedCornerShape(16.dp),
+                clip = true,
+                )
+
     )
+
     Person(
         name = name,
         profession = profession
